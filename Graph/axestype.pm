@@ -828,7 +828,7 @@ sub create_x_labels
 # The drawing of labels for the axes. This is split up in the four
 # positions a label can appear in, depending on a few settings. These
 # settings are all dealt with in the draw_x_labels and draw_y_labels
-# subroutines, which in turn call the approriate directional label
+# subroutines, which in turn call the appropriate directional label
 # drawer
 #
 sub draw_left_label

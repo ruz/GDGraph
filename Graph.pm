@@ -622,7 +622,7 @@ but never made into production version. This dev version contains very
 nice changes (truecolor, anti-aliasing and alpha support), but due to
 nature of how GD and GD::Graph works authors had to add third optional
 argument (truecolor) to all constructors in GD::Graph modules. I think
-that this should be and can be adjusted to recieve named arguments in
+that this should be and can be adjusted to receive named arguments in
 constructor and still be backwards compatible. If you were using that
 dev release and want to fast forward inclusion of this work into production
 release then contact ruz@cpan.org
@@ -740,7 +740,7 @@ especially the FAQ.
 
 =item GD::Graph::chart-E<gt>new([width,height])
 
-Create a new object $graph with optional width and heigth. 
+Create a new object $graph with optional width and height. 
 Default width = 400, default height = 300. I<chart> is either
 I<bars>, I<lines>, I<points>, I<linespoints>, I<area>, I<mixed> or
 I<pie>.
@@ -1002,7 +1002,7 @@ x_long_ticks, y_long_ticks, x_tick_length and y_tick_length.
 
 =item x_ticks
 
-If I<x_ticks> is a true value, ticks will be drawm for the x axis.
+If I<x_ticks> is a true value, ticks will be drawn for the x axis.
 These ticks are subject to the values of I<long_ticks> and
 I<tick_length>.  Default: 1.
 
@@ -1078,7 +1078,7 @@ prevents that.
 For example, when your X values are the months of the year (i.e. Jan -
 Dec), and you set I<x_label_skip> to 3, the months printed on the axis
 will be Jan, Apr, Jul, Oct and Dec; even though Dec does not really
-belonmg to that sequence. If you do not like the last month to be
+belong to that sequence. If you do not like the last month to be
 printed, set I<x_last_label_skip> to a true value.
 
 This option has no effect in other circumstances. Also see
@@ -1145,7 +1145,7 @@ Default: 1.
 
 Draw no axes at all. If this is set to undef, all axes are drawn. If
 it is set to 0, the zero axis will be drawn, I<for bar charts only>.
-If this is set to a true value, no axes will be drawns at all. Value
+If this is set to a true value, no axes will be drawn at all. Value
 labels on the axes and ticks will also not be drawn, but axis lables
 are drawn.
 Default: undef.
@@ -1186,7 +1186,7 @@ Default: 0.
 
 If set to a true value, the zero axis will be drawn (see
 I<zero_axis>), and no axis at the bottom of the graph will be drawn.
-The labels for X values will be placed on the zero exis.
+The labels for X values will be placed on the zero axis.
 Default: 0.
 
 =item y_max_value, y_min_value

@@ -196,7 +196,7 @@ Carp::croak to display the current message, as well as all the other
 error messages pending.
 
 In the current implementation these are almost identical when called
-with a scalar argument, except that the default ewrror level is
+with a scalar argument, except that the default error level is
 different. When called with an array reference, they are identical in
 function. This may change in the future. They're mainly here for code
 clarity.
@@ -227,7 +227,7 @@ sub __error_hash
     }
     else
     {
-        # someting else, which I can't deal with
+        # something else, which I can't deal with
         warn "Did you read the documentation for GD::Graph::Error?";
         return;
     }
