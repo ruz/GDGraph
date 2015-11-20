@@ -665,6 +665,7 @@ sub setup_coords
     my $s = shift;
 
     # Do some sanity checks
+    $s->{adjust_axes} = ($s->{two_axes} == 2)? 0 : 1;
     $s->{two_axes} = 0 if $s->{_data}->num_sets < 2 || $s->{two_axes} < 0;
     $s->{two_axes} = 1 if $s->{two_axes} > 1;
 
@@ -1521,12 +1522,12 @@ sub set_max_min
     # First, calculate some decent values
     if ( $self->{two_axes} ) 
     {   # XXX this is almost certainly a bug: this key is not set anywhere
-        my $min_range_1 = defined($self->{min_range_1})
-                ? $self->{min_range_1}
-                : $self->{min_range};
-        my $min_range_2 = defined($self->{min_range_2})
-                ? $self->{min_range_2}
-                : $self->{min_range};
+        my $min_range_1 = defined($self->{y1_min_range})
+                ? $self->{y1_min_range}
+                : $self->{y_min_range};
+        my $min_range_2 = defined($self->{y2_min_range})
+                ? $self->{y2_min_range}
+                : $self->{y_min_range};
 
         my(@y_min, @y_max);
         for my $nd (1 .. $self->{_data}->num_sets)
@@ -1607,7 +1608,7 @@ sub set_max_min
     $self->{x_min}    = $self->{x_min_value}  if defined $self->{x_min_value};
     $self->{x_max}    = $self->{x_max_value}  if defined $self->{x_max_value};
 
-    if ($self->{two_axes})
+    if ($self->{two_axes} && $self->{adjust_axes})
     {
         # If we have two axes, we need to make sure that the zero is at
         # the same spot.
