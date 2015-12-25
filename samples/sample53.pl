@@ -3,8 +3,10 @@ use GD::Graph::colour;
 use GD::Graph::Data;
 require 'save.pl';
 
-GD::Graph::colour::read_rgb("rgb.txt") or 
-	die "Cannot read colours from rgb.txt";
+my $path = $ENV{GDGRAPH_SAMPLES_PATH} ? $ENV{GDGRAPH_SAMPLES_PATH} : '';
+
+GD::Graph::colour::read_rgb("${path}rgb.txt") or
+	die "Cannot read colours from ${path}rgb.txt";
 
 print STDERR "Processing sample53\n";
 
@@ -45,3 +47,5 @@ $my_graph->set_legend( 'one', 'two', undef, 'four' );
 $my_graph->plot($data) or die $my_graph->error;
 save_chart($my_graph, 'sample53');
 
+
+1;

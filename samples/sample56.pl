@@ -3,8 +3,9 @@ require 'save.pl';
 
 print STDERR "Processing sample56 (experimental)\n";
 
-@data = read_data("sample54.dat") 
-	or die "Cannot read data from sample54.dat";
+my $path = $ENV{GDGRAPH_SAMPLES_PATH} ? $ENV{GDGRAPH_SAMPLES_PATH} : '';
+@data = read_data("${path}sample54.dat")
+	or die "Cannot read data from ${path}sample54.dat";
 
 $my_graph = new GD::Graph::lines();
 
@@ -64,3 +65,5 @@ sub read_data
 
 	return @d;
 }
+
+1;

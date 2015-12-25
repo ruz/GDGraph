@@ -25,3 +25,5 @@ $graph->set(
 $graph->set_legend( 'left axis', 'right axis' );
 $graph->plot(\@data);
 save_chart($graph, $name);
+
+1;

@@ -40,3 +40,5 @@ for my $my_graph (GD::Graph::bars->new, GD::Graph::hbars->new)
     save_chart($my_graph, $name);
 }
 
+
+1;

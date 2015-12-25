@@ -30,3 +30,5 @@ $my_graph->set(
 $my_graph->plot(\@data);
 save_chart($my_graph, 'sample51');
 
+
+1;

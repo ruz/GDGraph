@@ -3,7 +3,9 @@ require 'save.pl';
 
 print STDERR "Processing sample42\n";
 
-@data =  read_data_from_csv("sample42.dat")
+my $path = $ENV{GDGRAPH_SAMPLES_PATH} ? $ENV{GDGRAPH_SAMPLES_PATH} : '';
+
+@data =  read_data_from_csv("${path}sample42.dat")
 	or die "Cannot read data from sample42.dat";
 
 $my_graph = new GD::Graph::linespoints( );
@@ -50,3 +52,5 @@ sub read_data_from_csv
 	return @d;
 }
 
+
+1;

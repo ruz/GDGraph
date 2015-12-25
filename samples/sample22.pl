@@ -25,3 +25,5 @@ $graph->set(rotate_chart => 1) if $name =~ /-h$/;
 $graph->set_legend( 'left axis', 'right axis' );
 $graph->plot(\@data);
 save_chart($graph, $name);
+
+1;

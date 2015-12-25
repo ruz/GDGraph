@@ -30,3 +30,5 @@ $my_graph->set_legend( qw( one two ) );
 $my_graph->plot(\@data);
 save_chart($my_graph, 'sample31');
 
+
+1;

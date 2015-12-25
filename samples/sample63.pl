@@ -39,3 +39,5 @@ $my_graph->set_legend(undef, qw(increment more));
 $my_graph->plot(\@data) or die $my_graph->error;
 save_chart($my_graph, 'sample63');
 
+
+1;

@@ -33,3 +33,5 @@ $graph->set(
 
 $graph->plot(\@data);
 save_chart($graph, $name);
+
+1;

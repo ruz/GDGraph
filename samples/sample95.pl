@@ -22,6 +22,8 @@ $values->set_y(3, 7, undef) or warn $data->error;
 
 my @names = qw/sample95 sample95-h/;
 
+my $path = $ENV{GDGRAPH_SAMPLES_PATH} ? $ENV{GDGRAPH_SAMPLES_PATH} : '';
+
 for my $my_graph (GD::Graph::bars->new(600,400),
                   GD::Graph::hbars->new(600,400))
 {
@@ -52,7 +54,7 @@ for my $my_graph (GD::Graph::bars->new(600,400),
 
 	bar_spacing         => 1,
 
-	logo                => 'logo.' . GD::Graph->export_format,
+	logo                => "${path}logo." . GD::Graph->export_format,
 	logo_position       => 'BR',
 
 	transparent         => 0,
@@ -91,3 +93,5 @@ for my $my_graph (GD::Graph::bars->new(600,400),
     $my_graph->plot($data) or die $my_graph->error;
     save_chart($my_graph, $name);
 }
+
+1;

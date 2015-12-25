@@ -41,3 +41,5 @@ for my $graph (GD::Graph::bars->new(@dim),GD::Graph::hbars->new(@dim)) {
 	save_chart($graph,$name);
 }
 
+
+1;
