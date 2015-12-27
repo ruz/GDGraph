@@ -104,3 +104,5 @@ if (1) {
 
 save_chart($my_graph, 'sample71');
 
+
+1;

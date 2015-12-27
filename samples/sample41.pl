@@ -33,3 +33,5 @@ $my_graph->set_legend( 'data set 1', 'data set 2', 'data set 3' );
 $my_graph->plot(\@data);
 save_chart($my_graph, 'sample41');
 
+
+1;

@@ -29,6 +29,8 @@ WriteMakefile(
 
         BUILD_REQUIRES   => {
             'ExtUtils::MakeMaker' => '6.58',
+            'Capture::Tiny'       => '0.30',
+            'Test::Exception'     => '0.40',
         },
         CONFIGURE_REQUIRES   => {
             'ExtUtils::MakeMaker' => '6.58',
@@ -95,5 +97,8 @@ before installing it.  You can run the examples in the samples
 directory with `make samples` or by going into that directory, and
 just running `make`.
 If that fails, please read samples/Makefile.
+UPDATE: Running the examples is part of the test procedure now. You
+are still encouraged to run check them out to learn from them and
+to see the ouput images.
 END
 

@@ -98,3 +98,5 @@ for my $graph (GD::Graph::bars->new(600, 400),
     save_chart($graph, $name);
 }
 
+
+1;

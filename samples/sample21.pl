@@ -31,3 +31,5 @@ for my $graph (GD::Graph::area->new)
     save_chart($graph, $name);
 }
 
+
+1;

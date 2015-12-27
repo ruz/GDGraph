@@ -38,3 +38,5 @@ $my_graph->set_legend("Us", "Them", "Others");
 $my_graph->plot(\@data);
 save_chart($my_graph, 'sample52');
 
+
+1;

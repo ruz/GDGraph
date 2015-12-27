@@ -59,3 +59,5 @@ $my_graph->set(
 $my_graph->set_legend( qw( incomming outgoing total ) );
 $my_graph->plot(\@data) or die $my_graph->error;
 save_chart($my_graph, 'sample64');
+
+1;

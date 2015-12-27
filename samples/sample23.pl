@@ -94,3 +94,5 @@ $graph->set(
 $graph->plot(\@data);
 save_chart($graph, 'sample23');
 
+
+1;

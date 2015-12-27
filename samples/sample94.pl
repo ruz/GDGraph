@@ -33,3 +33,5 @@ $my_graph->set_value_font(GD::Font->Giant);
 $my_graph->plot(\@data);
 save_chart($my_graph, 'sample94');
 
+
+1;

@@ -38,3 +38,5 @@ for my $my_graph (GD::Graph::bars->new, GD::Graph::hbars->new)
     $my_graph->plot(\@data) or die $my_graph->error;
     save_chart($my_graph, $name);
 }
+
+1;

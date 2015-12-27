@@ -2,7 +2,7 @@
 use GD::Graph::area;
 require 'save.pl';
 
-print STDERR "Processing sample23\n";
+print STDERR "Processing sample29\n";
 
 @data = ( 
     ["1st","2nd","3rd","4th","5th","6th","7th", "8th", "9th"],
@@ -29,3 +29,5 @@ $my_graph->set_legend( 'empty', 'data' );
 $my_graph->plot(\@data);
 save_chart($my_graph, 'sample23');
 
+
+1;

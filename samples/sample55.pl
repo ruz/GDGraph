@@ -31,3 +31,5 @@ $my_graph->set_legend('Thanks to Scott Prahl');
 $my_graph->plot(\@data);
 save_chart($my_graph, 'sample55');
 
+
+1;
