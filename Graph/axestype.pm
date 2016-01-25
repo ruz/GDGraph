@@ -665,6 +665,7 @@ sub setup_coords
     my $s = shift;
 
     # Do some sanity checks
+    $s->{adjust_axes} = ($s->{two_axes} == 2)? 0 : 1;
     $s->{two_axes} = 0 if $s->{_data}->num_sets < 2 || $s->{two_axes} < 0;
     $s->{two_axes} = 1 if $s->{two_axes} > 1;
 
@@ -1607,7 +1608,7 @@ sub set_max_min
     $self->{x_min}    = $self->{x_min_value}  if defined $self->{x_min_value};
     $self->{x_max}    = $self->{x_max_value}  if defined $self->{x_max_value};
 
-    if ($self->{two_axes})
+    if ($self->{two_axes} && $self->{adjust_axes})
     {
         # If we have two axes, we need to make sure that the zero is at
         # the same spot.
