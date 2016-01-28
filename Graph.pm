@@ -1191,10 +1191,7 @@ Default: 0.
 
 =item y_max_value, y_min_value
 
-Maximum and minimum value displayed on the y axis. If two_axes is a
-true value, then y1_min_value, y1_max_value (for the left axis),
-and y2_min_value, y2_max_value (for the right axis) take precedence
-over these.
+Maximum and minimum value displayed on the y axis. 
 
 The range (y_min_value..y_max_value) has to include all the values of
 the data points, or I<GD::Graph> will die with a message.
@@ -1204,6 +1201,15 @@ include 0. If it doesn't, the values will be adapted before attempting
 to draw the graph.
 
 Default: Computed from data sets.
+
+=item y1_max_value, y1_min_value, y2_max_value, y2_min_value
+
+Ignored if two_axes is not set. If two_axes is a true value, then 
+y1_min_value, y1_max_value (for the left axis), and y2_min_value, 
+y2_max_value (for the right axis) take precedence over y_max_value 
+and y_min_value.
+
+Behaviour and default values are as with y_max_value and y_min_value.
 
 =item axis_space
 
