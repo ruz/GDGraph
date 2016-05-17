@@ -1584,11 +1584,10 @@ sub set_max_min
         {
             ($self->{true_x_min}, $self->{true_x_max}) = 
                 $self->{_data}->get_min_max_x;
-            ($self->{x_min}, $self->{x_max}, $self->{x_tick_number}) =
-                _best_ends($self->{true_x_min}, $self->{true_x_max},
-                        @$self{'x_tick_number','x_min_range'});
- 
-        }
+	}
+	($self->{x_min}, $self->{x_max}, $self->{x_tick_number}) =
+	    _best_ends($self->{true_x_min}, $self->{true_x_max},
+		       $self->{x_tick_number}, $self->{x_min_range});
     }
 
     # Overwrite these with any user supplied ones
