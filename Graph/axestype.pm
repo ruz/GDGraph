@@ -619,7 +619,7 @@ sub setup_x_step_size_v
                 ($s->{true_x_min} - $s->{x_min}) * $delta + $s->{left};
             $s->{x_step} = 
                 ($s->{true_x_max} - $s->{true_x_min}) * 
-                $delta/($s->{_data}->num_points - 1);
+                $delta/($s->{_data}->num_points + 1);
         }
     }
     else
@@ -650,7 +650,7 @@ sub setup_x_step_size_h
                 ($s->{true_x_min} - $s->{x_min}) * $delta + $s->{top};
             $s->{x_step} = 
                 ($s->{true_x_max} - $s->{true_x_min}) * 
-                $delta/($s->{_data}->num_points - 1);
+                $delta/($s->{_data}->num_points + 1);
         }
     }
     else
